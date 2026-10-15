@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f5a623"><meta name="description" content="رحلة - اطلب من محلات كفر الشيخ بسهولة">
+<link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css">
+<title>رحلة | REHLA</title>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#home"><span class="brand-mark">ر</span><span><b>رِحلة</b><small>REHLA • كفر الشيخ</small></span></a><div class="top-actions"><button class="icon-btn" id="ordersBtn" title="طلباتي">📦 <span>طلباتي</span></button><button class="cart-btn" id="cartBtn">🛒 <span>السلة</span><b id="cartCount">0</b></button></div></header>
+<main>
+<section id="homeView" class="view active">
+<section class="hero"><div class="hero-copy"><span class="eyebrow">كل اللي محتاجه.. في رحلة</span><h1>طلبك لحد باب بيتك<br><em>في كفر الشيخ</em></h1><p>مطاعم، حلويات، سوبر ماركت، وكل احتياجاتك اليومية.</p><a href="#shops" class="primary-link">اكتشف المحلات <span>←</span></a></div><div class="hero-art"><div class="sun"></div><div class="delivery-box">🛵</div><span class="float-chip chip-one">🍔 أكل طازة</span><span class="float-chip chip-two">⚡ توصيل سريع</span></div></section>
+<div class="location-bar"><span>📍</span><div><small>التوصيل إلى</small><b id="addressLabel">كفر الشيخ، مصر</b></div><button id="addressBtn">تغيير العنوان</button></div>
+<section class="section" id="shops"><div class="section-heading"><div><span class="eyebrow">اختار اللي على مزاجك</span><h2>بتدور على إيه؟</h2></div><span class="muted">كل احتياجاتك في مكان واحد</span></div>
+<div class="categories" id="categories"><button class="category active" data-category="الكل"><span>✨</span><b>الكل</b></button><button class="category" data-category="مطاعم"><span>🍔</span><b>مطاعم</b></button><button class="category" data-category="حلويات"><span>🍰</span><b>حلويات</b></button><button class="category" data-category="سوبر ماركت"><span>🛒</span><b>سوبر ماركت</b></button><button class="category" data-category="صيدليات"><span>💊</span><b>صيدليات</b></button><button class="category" data-category="أخرى"><span>🛍️</span><b>أخرى</b></button></div>
+<div class="search-row"><label class="search-box">🔎 <input id="searchInput" placeholder="دور على محل أو منتج..." autocomplete="off"></label><select id="sortSelect" aria-label="ترتيب المحلات"><option value="default">الترتيب الافتراضي</option><option value="name">الاسم</option></select></div>
+<div class="shop-grid" id="shopGrid"></div>
+</section>
+<section class="section how-section"><div class="section-heading"><div><span class="eyebrow">سهلة وبسيطة</span><h2>اطلب في 3 خطوات</h2></div></div><div class="steps"><article><span>01</span><b>اختار المحل</b><p>تصفح المحلات والمنتجات المتاحة.</p></article><article><span>02</span><b>أكد طلبك</b><p>راجع السلة واكتب عنوان التوصيل.</p></article><article><span>03</span><b>استلم طلبك</b><p>مندوب رحلة يوصلك لحد باب البيت.</p></article></div></section>
+</section>
+<section id="shopView" class="view"><button class="back-btn" id="backHome">→ رجوع للمحلات</button><div id="shopDetail"></div></section>
+<section id="adminView" class="view"><div class="admin-head"><div><span class="eyebrow">إدارة رحلة</span><h1>لوحة التحكم</h1><p>إدارة المحلات والمنتجات والطلبات من موبايلك.</p></div><span class="admin-badge">ADMIN</span></div><div class="admin-tabs"><button class="active" data-panel="ordersPanel">الطلبات</button><button data-panel="shopsPanel">المحلات</button><button data-panel="productsPanel">المنتجات</button><button data-panel="couriersPanel">المناديب</button><button data-panel="applicationsPanel">طلبات التسجيل</button></div><div id="adminContent"></div></section>
+<section id="ordersView" class="view"><button class="back-btn" id="ordersBack">→ رجوع</button><div class="section-heading"><div><span class="eyebrow">تابع طلباتك</span><h2>طلباتي</h2></div></div><div id="customerOrders"></div></section>
+</main>
+<nav class="bottom-nav"><button class="nav-item active" data-view="homeView"><span>⌂</span>الرئيسية</button><button class="nav-item" id="navShops"><span>▦</span>المحلات</button><button class="nav-item" id="navOrders"><span>▤</span>طلباتي</button><button class="nav-item" id="navAccount"><span>♙</span>حسابي</button></nav>
+<div class="modal-backdrop" id="modalBackdrop"><section class="modal" role="dialog" aria-modal="true"><button class="modal-close" id="modalClose">×</button><div id="modalContent"></div></section></div>
+<div class="toast" id="toast" role="status"></div>
+<footer><div class="footer-brand"><span class="brand-mark">ر</span><b>رِحلة REHLA</b></div><p>مشوارك علينا، وطلبك علينا. 💛</p><small>© <span id="year"></span> رحلة — كفر الشيخ</small><button class="admin-entry" id="adminEntry">دخول الإدارة</button></footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script><script src="app.js"></script>
+</body></html>

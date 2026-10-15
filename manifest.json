@@ -1,0 +1,14 @@
+{
+  "name": "رحلة - REHLA",
+  "short_name": "رحلة",
+  "description": "اطلب من محلات كفر الشيخ",
+  "lang": "ar-EG",
+  "dir": "rtl",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f5a623",
+  "icons": [
+    {"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}
